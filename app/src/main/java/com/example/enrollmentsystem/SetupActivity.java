@@ -1,5 +1,6 @@
 package com.example.enrollmentsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.activity.EdgeToEdge;
@@ -33,12 +34,15 @@ public class SetupActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        // Handle presses on the action bar items
+        if (item.getItemId() == android.R.id.home) {
+            // Navigate back to MainActivity
+            Intent intent = new Intent(SetupActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 }

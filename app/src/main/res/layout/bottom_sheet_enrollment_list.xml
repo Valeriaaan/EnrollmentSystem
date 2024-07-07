@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:background="@drawable/background_bottom_sheet">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textSize="22sp"
+        android:textColor="@color/dark_text_color"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/handle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear all"
+        android:textColor="@color/violet_secondary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/titleTextView" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/periodTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Period"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/periodSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/periodTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/levelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Level"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/periodSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/levelSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/levelTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/departmentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Department"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/levelSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/departmentSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/departmentTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/courseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Course"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/departmentSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/courseSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/courseTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/yearTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Year"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/courseSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/yearSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/yearTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/sectionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Section"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/yearSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/sectionSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/sectionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doneButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Done"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/sectionSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@color/violet_primary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,6 @@ package com.example.enrollmentsystem;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -13,9 +12,8 @@ import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,15 +64,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showLogoutConfirmationDialog() {
-        new AlertDialog.Builder(this)
-                .setTitle("Logout")
-                .setMessage("Are you sure you want to logout?")
-                .setPositiveButton(android.R.string.yes, (dialog, which) -> {
-                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                    finish();
-                })
-                .setNegativeButton(android.R.string.no, null)
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
+        new MaterialAlertDialogBuilder(this)
+            .setTitle("Confirm Logout")
+            .setMessage("Click “Confirm” to logout of the system.")
+            .setPositiveButton("Confirm", (dialog, which) -> {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                finish();
+            })
+            .setNegativeButton("Cancel", null)
+            .show();
     }
 }

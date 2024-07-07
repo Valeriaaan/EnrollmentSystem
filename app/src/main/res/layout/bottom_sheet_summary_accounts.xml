@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    android:background="@drawable/background_bottom_sheet">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textSize="22sp"
+        android:textColor="@color/dark_text_color"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/handle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear all"
+        android:textColor="@color/violet_secondary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/titleTextView" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/frequency_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Frequency"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Spinner
+        android:id="@+id/frequencySpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/frequency_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/start_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Start Date"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/frequencySpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/startDateTextInputLayout"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/start_date_label"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/startDateTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mm/dd/yyyy"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="date"
+            android:drawableStart="@drawable/icon_calendar_24"
+            android:drawableTint="@color/dark_icon_color"
+            android:drawablePadding="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/endDateTextInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="2dp"
+        android:text="End Date"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/frequencySpinner"
+        app:layout_constraintStart_toEndOf="@id/startDateTextInputLayout"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/end_date_layout"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/endDateTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/endDateTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/endDateTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="mm/dd/yyyy"
+            android:inputType="date"
+            android:drawableStart="@drawable/icon_calendar_24"
+            android:drawableTint="@color/dark_icon_color"
+            android:drawablePadding="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/period_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Period"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/startDateTextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/periodSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/period_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/level_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Level"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/periodSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/levelSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/level_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <TextView
+        android:id="@+id/department_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Filter by Department"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/levelSpinner"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/departmentSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/department_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doneButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Done"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/departmentSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:backgroundTint="@color/violet_primary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
