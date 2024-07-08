@@ -1,28 +1,30 @@
-package com.example.enrollmentsystem;
+package com.example.enrollmentsystem.ui.feemanagement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.enrollmentsystem.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-public class EnrollmentListFragment extends Fragment {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class DiscountManagementFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
 
-    public EnrollmentListFragment() {
+    public DiscountManagementFragment() {
         // Required empty public constructor
     }
 
-    public static EnrollmentListFragment newInstance(String param1, String param2) {
-        EnrollmentListFragment fragment = new EnrollmentListFragment();
+    public static DiscountManagementFragment newInstance(String param1, String param2) {
+        DiscountManagementFragment fragment = new DiscountManagementFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -42,13 +44,12 @@ public class EnrollmentListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_enrollment_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_discount_management, container, false);
 
-        Button btnFilter = rootView.findViewById(R.id.btnFilter);
-        btnFilter.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab = rootView.findViewById(R.id.addFeeButton);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 showBottomSheetDialog();
             }
         });
@@ -59,7 +60,7 @@ public class EnrollmentListFragment extends Fragment {
     private void showBottomSheetDialog() {
         // Create an instance of the bottom sheet dialog
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(requireContext());
-        View bottomSheetView = getLayoutInflater().inflate(R.layout.bottom_sheet_enrollment_list, null);
+        View bottomSheetView = getLayoutInflater().inflate(R.layout.bottom_sheet_add_discount, null);
 
         // Set up your bottom sheet view and its content here
 

@@ -1,6 +1,5 @@
 package com.example.enrollmentsystem;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
@@ -12,6 +11,11 @@ import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.enrollmentsystem.ui.enrollment.EnrollmentActivity;
+import com.example.enrollmentsystem.ui.feemanagement.FeeManagementActivity;
+import com.example.enrollmentsystem.ui.registrar.RegistrarActivity;
+import com.example.enrollmentsystem.ui.studentledger.StudentLedgerActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 

@@ -1,4 +1,4 @@
-package com.example.enrollmentsystem;
+package com.example.enrollmentsystem.ui.feemanagement;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.enrollmentsystem.MainActivity;
+import com.example.enrollmentsystem.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class FeeManagementActivity extends AppCompatActivity {

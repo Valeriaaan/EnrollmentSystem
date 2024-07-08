@@ -18,13 +18,13 @@
             android:name=".SetupActivity"
             android:exported="false" />
         <activity
-            android:name=".FeeManagementActivity"
+            android:name=".ui.feemanagement.FeeManagementActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistrarActivity"
+            android:name=".ui.registrar.RegistrarActivity"
             android:exported="false" />
         <activity
-            android:name=".StudentLedgerActivity"
+            android:name=".ui.studentledger.StudentLedgerActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
@@ -39,7 +39,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".EnrollmentActivity"
+            android:name=".ui.enrollment.EnrollmentActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

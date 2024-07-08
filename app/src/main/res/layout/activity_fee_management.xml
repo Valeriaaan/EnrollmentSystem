@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fitsSystemWindows="true"
-    tools:context=".FeeManagementActivity">
+    tools:context=".ui.feemanagement.FeeManagementActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/feeManagementToolbar"
