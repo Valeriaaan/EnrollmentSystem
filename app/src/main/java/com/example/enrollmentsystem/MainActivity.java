@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.enrollmentsystem.ui.assessment.AssessmentActivity;
 import com.example.enrollmentsystem.ui.enrollment.EnrollmentActivity;
 import com.example.enrollmentsystem.ui.feemanagement.FeeManagementActivity;
 import com.example.enrollmentsystem.ui.registrar.RegistrarActivity;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.nav_enrollment) {
                 startActivity(new Intent(MainActivity.this, EnrollmentActivity.class));
             } else if (id == R.id.nav_assessment) {
-                // startActivity(new Intent(MainActivity.this, LogoutActivity.class));
+                startActivity(new Intent(MainActivity.this, AssessmentActivity.class));
             } else if (id == R.id.nav_fee_management) {
                 startActivity(new Intent(MainActivity.this, FeeManagementActivity.class));
             } else if (id == R.id.nav_ledger) {

@@ -20,7 +20,7 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Assessment Fee"
+        android:text="Add New Payment"
         android:textSize="22sp"
         android:textColor="@color/dark_text_color"
         android:fontFamily="@font/roboto_medium"
@@ -122,33 +122,6 @@
 
     <!--  ====================================================  -->
 
-    <TextView
-        android:id="@+id/subFeeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingBottom="5dp"
-        android:text="Filter by Section"
-        android:textColor="@color/dark_icon_color"
-        android:textSize="16sp"
-        android:fontFamily="@font/roboto_medium"
-        app:layout_constraintTop_toBottomOf="@id/descriptionTextInputLayout"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <Spinner
-        android:id="@+id/subFeeSpinner"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="10dp"
-        android:background="@drawable/background_spinner"
-        app:layout_constraintTop_toBottomOf="@id/subFeeTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:spinnerMode="dropdown" />
-
-    <!--  ====================================================  -->
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/doneButton"
         android:layout_width="0dp"
@@ -156,7 +129,7 @@
         android:layout_marginTop="16dp"
         android:text="Done"
         android:fontFamily="@font/roboto_medium"
-        app:layout_constraintTop_toBottomOf="@+id/subFeeSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:backgroundTint="@color/violet_primary" />
