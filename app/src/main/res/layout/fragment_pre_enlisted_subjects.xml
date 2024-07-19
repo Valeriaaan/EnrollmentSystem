@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/pre_enlisted_subject_item" />
+        tools:listitem="@layout/item_pre_enlisted_subject" />
 
     <!--  ================================================== -->
 

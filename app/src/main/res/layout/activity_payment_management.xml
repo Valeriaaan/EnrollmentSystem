@@ -2,37 +2,61 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@color/white"
-    tools:context=".ui.feemanagement.AssessmentMangementFragment">
+    tools:context=".ui.paymentmanagement.PaymentManagementActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/paymentManagementToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title=" "
+        app:popupTheme="@style/Widget.Material3.PopupMenu">
+
+        <TextView
+            android:id="@+id/toolbarTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Payment Management"
+            android:textColor="@color/light_text_color"
+            android:textSize="22sp"
+            android:fontFamily="@font/roboto_bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/assessmentDataTextView"
+        android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="Manage Assessment Fee"
+        android:text="Manage Payment Fee"
         android:textColor="@color/dark_text_color"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--  ================================================== -->
+        app:layout_constraintTop_toBottomOf="@+id/paymentManagementToolbar" />
 
     <!--  ================================================== -->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/assessmentFeeRecyclerView"
+        android:id="@+id/paymentFeeRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/assessmentDataTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+
+    <!--  ================================================== -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addFeeButton"

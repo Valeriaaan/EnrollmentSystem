@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="24dp"
-    android:background="@drawable/background_bottom_sheet">
+    android:background="@drawable/background_bottom_sheet"
+    tools:context=".ui.feemanagement.BottomSheetAddAssessmentFragment">
 
     <com.google.android.material.bottomsheet.BottomSheetDragHandleView
         android:id="@+id/handle"
@@ -19,43 +20,12 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Discount"
+        android:text="Add New Assessment Fee"
         android:textSize="22sp"
         android:textColor="@color/dark_text_color"
         android:fontFamily="@font/roboto_medium"
         app:layout_constraintTop_toBottomOf="@id/handle"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <!--  ====================================================  -->
-
-    <TextView
-        android:id="@+id/codeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Code *"
-        android:textColor="@color/dark_icon_color"
-        android:textSize="16sp"
-        android:fontFamily="@font/roboto_medium"
-        app:layout_constraintTop_toBottomOf="@id/titleTextView"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/codeTextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/codeTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/codeEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Enter Code" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <!--  ====================================================  -->
 
@@ -68,7 +38,7 @@
         android:textColor="@color/dark_icon_color"
         android:textSize="16sp"
         android:fontFamily="@font/roboto_medium"
-        app:layout_constraintTop_toBottomOf="@id/codeTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -152,6 +122,33 @@
 
     <!--  ====================================================  -->
 
+    <TextView
+        android:id="@+id/subFeeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="Sub Fee"
+        android:textColor="@color/dark_icon_color"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/subFeeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/background_spinner"
+        app:layout_constraintTop_toBottomOf="@id/subFeeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:spinnerMode="dropdown" />
+
+    <!--  ====================================================  -->
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/doneButton"
         android:layout_width="0dp"
@@ -159,7 +156,7 @@
         android:layout_marginTop="16dp"
         android:text="Done"
         android:fontFamily="@font/roboto_medium"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/subFeeSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:backgroundTint="@color/violet_primary" />

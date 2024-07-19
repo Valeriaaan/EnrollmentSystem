@@ -15,9 +15,13 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.enrollmentsystem.MainActivity;
 import com.example.enrollmentsystem.R;
+import com.example.enrollmentsystem.model.AssessmentFee;
+import com.example.enrollmentsystem.model.DiscountFee;
 import com.google.android.material.tabs.TabLayout;
 
-public class FeeManagementActivity extends AppCompatActivity {
+public class FeeManagementActivity extends AppCompatActivity
+        implements DiscountManagementFragment.OnDiscountFeeAddedListener,
+        AssessmentMangementFragment.OnAssessmentFeeAddedListener {
 
     private Fragment assessmentManagementFragment;
     private Fragment discountManagementFragment;
@@ -95,5 +99,17 @@ public class FeeManagementActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDiscountFeeAdded(DiscountFee discountFee) {
+        // Implement this method if you need to handle actions when a discount fee is added
+        // For example, updating UI elements or performing additional operations
+    }
+
+
+    @Override
+    public void onAssessmentFeeAdded(AssessmentFee assessmentFee) {
+
     }
 }
