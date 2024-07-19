@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.enrollmentsystem.ui.assessment.AssessmentActivity;
 import com.example.enrollmentsystem.ui.enrollment.EnrollmentActivity;
 import com.example.enrollmentsystem.ui.feemanagement.FeeManagementActivity;
+import com.example.enrollmentsystem.ui.paymentmanagement.PaymentManagementActivity;
 import com.example.enrollmentsystem.ui.registrar.RegistrarActivity;
 import com.example.enrollmentsystem.ui.studentledger.StudentLedgerActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, EnrollmentActivity.class));
             } else if (id == R.id.nav_assessment) {
                 startActivity(new Intent(MainActivity.this, AssessmentActivity.class));
+            } else if (id == R.id.nav_payment) {
+                // startActivity(new Intent(MainActivity.this, AssessmentActivity.class));
+            } else if (id == R.id.nav_payment_management) {
+                startActivity(new Intent(MainActivity.this, PaymentManagementActivity.class));
             } else if (id == R.id.nav_fee_management) {
                 startActivity(new Intent(MainActivity.this, FeeManagementActivity.class));
             } else if (id == R.id.nav_ledger) {

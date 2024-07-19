@@ -16,6 +16,14 @@
                     android:icon="@drawable/icon_assessment_24"
                     android:title="Assessment" />
                 <item
+                    android:id="@+id/nav_payment"
+                    android:icon="@drawable/icon_enroll_24"
+                    android:title="Payment" />
+                <item
+                    android:id="@+id/nav_payment_management"
+                    android:icon="@drawable/icon_enroll_24"
+                    android:title="Payment Management" />
+                <item
                     android:id="@+id/nav_fee_management"
                     android:icon="@drawable/icon_enroll_24"
                     android:title="Fee Management" />

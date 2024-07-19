@@ -12,7 +12,83 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/studentInfoTextView"
+            android:id="@+id/studentInfoTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Student Information"
+            android:textColor="@color/dark_text_color"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentInfoTitleTextView" />
+
+        <!-- ============================================================================ -->
+
+        <TextView
+            android:id="@+id/studentIDTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Student ID"
+            android:textColor="@color/dark_icon_color"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/studentIDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="21-0594"
+            android:textColor="@color/dark_text_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/studentIDTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/studentIDTitleTextView" />
+
+        <!-- ============================================================================ -->
+
+        <TextView
+            android:id="@+id/studentNameTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Name"
+            android:textColor="@color/dark_icon_color"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentIDTextView" />
+
+        <TextView
+            android:id="@+id/studentNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Wells D. Fargo"
+            android:textColor="@color/dark_text_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/studentNameTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/studentNameTitleTextView" />
+
+        <!--  ================================================== -->
+
+        <TextView
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -22,7 +98,7 @@
             android:textColor="@color/dark_text_color"
             android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/studentNameTextView" />
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider"
@@ -31,7 +107,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/studentInfoTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
         <!--  ================================================== -->
 
